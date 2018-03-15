@@ -11,11 +11,13 @@ public class PrimeFactorization {
 		for(int i = 2; i < maxVal; i++) {
 			if(num.intValue() % i == 0) {
 				primesList.add(i);
+				//System.out.println(i);
 				BigDecimal factoredNum = new BigDecimal(num.intValue()/i);
 				primeFactorization(factoredNum, primesList);
 				break;
 			} else if (i==maxVal-1) {
 				primesList.add(num.intValue());
+				//System.out.println(num.intValue());
 			}	
 		}		
 		//return primes;
